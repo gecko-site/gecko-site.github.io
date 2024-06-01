@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Gecko Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #000;
+            color: #87C52F;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #87C52F;
+        }
+        footer {
+            background-color: #000;
+            color: #87C52F;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #87C52F;
+            color: #000;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <img src="https://yourlogo.url/logo.png" alt="Gecko Solutions Logo" class="logo">
+        <h1>Contacto - Gecko Solutions</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Contáctanos</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="section">
+            <h2>Nuestra Ubicación</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Gecko Solutions. Todos los derechos reservados.</p>
+        <p>Celular: 64222142</p>
+        <p>Dirección: Avenida Cívica #3031, Zona Huayna Potosí, El Alto</p>
+    </footer>
+
+    <script>
+        var map = L.map('map').setView([-16.500000, -68.150000], 15); // Coordenadas aproximadas de El Alto
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        L.marker([-16.500000, -68.150000]).addTo(map)
+            .bindPopup('Gecko Solutions<br>Avenida Cívica #3031, Zona Huayna Potosí, El Alto')
+            .openPopup();
+    </script>
+</body>
+</html>
