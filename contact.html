@@ -113,13 +113,15 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
+
+            var templateParams = {
+              name: document.getElementById('name').value,
+              email: document.getElementById('email').value,
+              notes: document.getElementById('message').value,
+            };
             
             if (name && email && message) {
-                emailjs.send("service_rmjb2jp", "service_rmjb2jp", {
-                    from_name: name,
-                    from_email: email,
-                    message: message
-                }).then(function(response) {
+                emailjs.send("service_rmjb2jp", "service_rmjb2jp", templateParams).then(function(response) {
                     notification.classList.remove('error');
                     notification.classList.add('success');
                     notification.innerHTML = "¡Tu mensaje ha sido enviado con éxito!";
