@@ -114,12 +114,12 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            const notes1 = "Nombre: " + name + " | Correo: " + email + " | Mensaje: " + message;
+            const message = "Nombre: " + name + " | Correo: " + email + " | Mensaje: " + message;
 
 
             var templateParams = {
               name: name,
-              notes: notes1,
+              notes: message,
             };
             
             if (name && email && message) {
