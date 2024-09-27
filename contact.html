@@ -111,10 +111,11 @@
             const notification = document.getElementById('notification');
             notification.style.display = 'none';
 
-           const name = document.getElementById('name').value;
+            const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            const notes1 = email + "   Mensaje: " + message;
+            const notes1 = "Nombre: " + name + " | Correo: " + email + " | Mensaje: " + message;
+
 
             var templateParams = {
               name: document.getElementById('name').value,
