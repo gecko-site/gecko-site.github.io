@@ -122,7 +122,7 @@
             };
             
             if (name && email && message) {
-                emailjs.sendForm("service_rmjb2jp", "template_l9chp0v", #contactForm).then(function(response) {
+                emailjs.sendForm("service_rmjb2jp", "template_l9chp0v", "#contactForm").then(function(response) {
                     notification.classList.remove('error');
                     notification.classList.add('success');
                     notification.innerHTML = "¡Tu mensaje ha sido enviado con éxito!";
