@@ -6,10 +6,11 @@
     <title>Gecko Solutions</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
         header {
             background-color: #000;
@@ -19,40 +20,92 @@
         }
         header h1 {
             margin: 0;
+            font-size: 36px;
+        }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
         }
         .container {
-            padding: 20px;
+            padding: 40px 20px;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .section h2 {
             color: #87C52F;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .section ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #87C52F;
+            font-size: 18px;
+        }
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
         }
         .cta {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 40px;
         }
         .cta button {
             background-color: #87C52F;
             color: #000;
             border: none;
-            padding: 15px 30px;
+            padding: 15px 40px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta button:hover {
+            background-color: #74a929;
         }
         footer {
             background-color: #000;
             color: #87C52F;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
+            padding: 20px 0;
+            position: relative;
             width: 100%;
             bottom: 0;
         }
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
         .logo {
-            width: 100px;
+            width: 120px;
             height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .cta button {
+                width: 100%;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+            header p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -66,20 +119,20 @@
         <div class="section">
             <h2>Nuestros Servicios</h2>
             <ul>
-                <li>Sistemas web geográficos</li>
-                <li>Especialistas en aplicaciones móviles</li>
-                <li>Especialistas en aplicaciones móviles geográficos</li>
-                <li>Mapas Offline móvil y Web</li>
-                <li>Sitios web autoadministrables</li>
-                <li>Crear o mejorar la presencia en redes sociales principales como Facebook, Telegram y TikTok</li>
-                <li>Diseño o rediseño de productos o servicios</li>
-                <li>Difusión masiva de productos o servicios</li>
+                <li>Desarrollo de sistemas web geográficos integrados</li>
+                <li>Aplicaciones móviles avanzadas con geolocalización</li>
+                <li>Mapas interactivos y servicios de mapas offline</li>
+                <li>Sitios web autoadministrables y personalizados</li>
+                <li>Gestión y optimización de redes sociales (Facebook, Telegram, TikTok)</li>
+                <li>Rediseño de productos y servicios para mayor impacto</li>
+                <li>Publicidad digital segmentada y difusión masiva</li>
+                <li>Automatización de procesos y soluciones de TI</li>
             </ul>
         </div>
         <div class="section">
             <h2>¿Por Qué Elegirnos?</h2>
-            <p>En Gecko Solutions, entendemos tus necesidades. Sabemos que necesitas llegar a más clientes y destacar en un mercado competitivo. Te ayudamos con la gestión de tus redes, impulsamos tus productos o servicios y creamos contenido de valor que refuerza los principios de tu empresa, negocio o emprendimiento.</p>
-            <p>¿Listo para llevar tu negocio al siguiente nivel?</p>
+            <p>En Gecko Solutions, transformamos tus ideas en soluciones digitales innovadoras. Nos especializamos en desarrollar tecnologías que mejoran la presencia digital de tu empresa, optimizan la experiencia de tus usuarios y te ayudan a destacar en un mercado cada vez más competitivo. Con un equipo de expertos en desarrollo web, aplicaciones móviles y marketing digital, estamos listos para llevar tu negocio al siguiente nivel.</p>
+            <p>Confía en nosotros para potenciar tu marca con soluciones tecnológicas de vanguardia.</p>
         </div>
         <div class="cta">
             <button onclick="window.location.href='contact.html'">Contáctanos</button>
@@ -91,4 +144,3 @@
     </footer>
 </body>
 </html>
-
