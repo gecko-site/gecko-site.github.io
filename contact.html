@@ -102,7 +102,25 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function() {
-            emailjs.init("yaQm9Jle9CgzTakBmxor9"); // Reemplaza con tu USER_ID de EmailJS
+            emailjs.init(
+                        {
+  publicKey: "yaQm9Jle9CgzTakBmxor9",
+  // Do not allow headless browsers
+  blockHeadless: true,
+  blockList: {
+    // Block the suspended emails
+    list: ['foo@emailjs.com', 'bar@emailjs.com'],
+    // The variable contains the email address
+    watchVariable: 'userEmail',
+  },
+  limitRate: {
+    // Set the limit rate for the application
+    id: 'app',
+    // Allow 1 request per 10s
+    throttle: 10000,
+  },
+}
+                        ); // Reemplaza con tu USER_ID de EmailJS
         })();
         
         function sendEmail(event) {
