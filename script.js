@@ -79,15 +79,15 @@ function initNavigation() {
 
     // Cambiar apariencia del navbar al hacer scroll
     window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
-        }
-    });
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+        navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.98)'; // ✅ MANTIENE OSCURO
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)'; // ✅ SOMBRA MÁS VISIBLE
+    } else {
+        navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.95)'; // ✅ MANTIENE OSCURO
+        navbar.style.boxShadow = 'none';
+    }
+});
 }
 
 // ===== SCROLL SUAVE =====
