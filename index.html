@@ -3,144 +3,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gecko Solutions</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #000;
-            color: #87C52F;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .container {
-            padding: 40px 20px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section h2 {
-            color: #87C52F;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .section ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .section ul li {
-            margin-bottom: 10px;
-            font-size: 18px;
-            position: relative;
-            padding-left: 20px;
-        }
-        .section ul li::before {
-            content: '✔';
-            position: absolute;
-            left: 0;
-            color: #87C52F;
-            font-size: 18px;
-        }
-        .section p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .cta {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .cta button {
-            background-color: #87C52F;
-            color: #000;
-            border: none;
-            padding: 15px 40px;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .cta button:hover {
-            background-color: #74a929;
-        }
-        footer {
-            background-color: #000;
-            color: #87C52F;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
-        footer p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        .logo {
-            width: 120px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            .cta button {
-                width: 100%;
-                padding: 15px;
-            }
-            header h1 {
-                font-size: 28px;
-            }
-            header p {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <meta name="description" content="Gecko Solutions - Soluciones tecnológicas innovadoras para talleres mecánicos, restaurantes y farmacias. Desarrollo de aplicaciones móviles especializadas.">
+    <meta name="keywords" content="sistemas gestión, talleres mecánicos, restaurantes, farmacias, aplicaciones móviles, La Paz Bolivia">
+    <title>Gecko Solutions | Innovación Tecnológica para tu Negocio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="https://raw.githubusercontent.com/gecko-site/gecko-site.github.io/refs/heads/main/gecko.png" alt="Gecko Solutions" class="logo">
-        <h1>Gecko Solutions</h1>
-        <p>Innovación y Tecnología a tu Alcance</p>
-    </header>
-    <div class="container">
-        <div class="section">
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Desarrollo de sistemas web geográficos integrados</li>
-                <li>Aplicaciones móviles avanzadas con geolocalización</li>
-                <li>Mapas interactivos y servicios de mapas offline</li>
-                <li>Sitios web autoadministrables y personalizados</li>
-                <li>Gestión y optimización de redes sociales (Facebook, Telegram, TikTok)</li>
-                <li>Rediseño de productos y servicios para mayor impacto</li>
-                <li>Publicidad digital segmentada y difusión masiva</li>
-                <li>Automatización de procesos y soluciones de TI</li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://raw.githubusercontent.com/gecko-site/gecko-site.github.io/refs/heads/main/gecko.png" alt="Gecko Solutions" class="logo">
+                <span class="logo-text">Gecko Solutions</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <div class="section">
-            <h2>¿Por Qué Elegirnos?</h2>
-            <p>En Gecko Solutions, transformamos tus ideas en soluciones digitales innovadoras. Nos especializamos en desarrollar tecnologías que mejoran la presencia digital de tu empresa, optimizan la experiencia de tus usuarios y te ayudan a destacar en un mercado cada vez más competitivo. Con un equipo de expertos en desarrollo web, aplicaciones móviles y marketing digital, estamos listos para llevar tu negocio al siguiente nivel.</p>
-            <p>Confía en nosotros para potenciar tu marca con soluciones tecnológicas de vanguardia.</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Transformamos tu negocio con
+                    <span class="highlight">tecnología innovadora</span>
+                </h1>
+                <p class="hero-description">
+                    Soluciones especializadas para talleres mecánicos, restaurantes y farmacias. 
+                    Desarrollo y migración de aplicaciones móviles de última generación.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#servicios" class="btn btn-primary">Descubre nuestros servicios</a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Contactar ahora
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Proyectos exitosos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Años de experiencia</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Soporte técnico</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Aplicaciones Móviles</h3>
+                    <p>Desarrollo nativo y multiplataforma</p>
+                </div>
+                <div class="hero-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Sistemas de Gestión</h3>
+                    <p>Soluciones empresariales completas</p>
+                </div>
+                <div class="hero-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Migración & Updates</h3>
+                    <p>Modernización de sistemas existentes</p>
+                </div>
+            </div>
         </div>
-        <div class="cta">
-            <button onclick="window.location.href='contact.html'">Contáctanos</button>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Productos Especializados</h2>
+                <p class="section-description">
+                    Soluciones completas diseñadas específicamente para cada industria
+                </p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>GeckoTaller</h3>
+                    <p>Sistema integral de gestión para talleres mecánicos. Control de inventarios, órdenes de trabajo, facturación y seguimiento de servicios.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Gestión de órdenes de trabajo</li>
+                        <li><i class="fas fa-check"></i> Control de inventarios</li>
+                        <li><i class="fas fa-check"></i> Facturación electrónica</li>
+                        <li><i class="fas fa-check"></i> Reportes detallados</li>
+                    </ul>
+                    <a href="#contacto" class="product-btn">Más información</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>GeckoRestaurant</h3>
+                    <p>Plataforma completa para restaurantes. Gestión de mesas, pedidos, cocina, inventario y delivery integrado.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Sistema de mesas y reservas</li>
+                        <li><i class="fas fa-check"></i> Gestión de cocina (KDS)</li>
+                        <li><i class="fas fa-check"></i> Control de delivery</li>
+                        <li><i class="fas fa-check"></i> Dashboard analítico</li>
+                    </ul>
+                    <a href="#contacto" class="product-btn">Más información</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>GeckoFarma</h3>
+                    <p>Sistema especializado para farmacias. Control de medicamentos, vencimientos, recetas médicas y gestión de proveedores.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Control de medicamentos</li>
+                        <li><i class="fas fa-check"></i> Alerta de vencimientos</li>
+                        <li><i class="fas fa-check"></i> Gestión de recetas</li>
+                        <li><i class="fas fa-check"></i> Trazabilidad completa</li>
+                    </ul>
+                    <a href="#contacto" class="product-btn">Más información</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <footer>
-        <p>&copy; 2024 Gecko Solutions. Todos los derechos reservados.</p>
-        <p>Whatsapp: 64222142</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Servicios Tecnológicos</h2>
+                <p class="section-description">
+                    Desarrollo, migración y optimización de soluciones digitales
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Desarrollo de Apps Móviles</h3>
+                    <p>Aplicaciones nativas y multiplataforma con tecnologías modernas como React Native, Flutter y desarrollo nativo.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Migración de Aplicaciones</h3>
+                    <p>Modernización de aplicaciones legacy a tecnologías actuales, mejorando rendimiento y funcionalidades.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h3>Actualizaciones de Apps</h3>
+                    <p>Mantenimiento y actualización continua de aplicaciones existentes, nuevas funcionalidades y corrección de bugs.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Aplicaciones web modernas, sitios corporativos y sistemas de gestión con tecnologías de vanguardia.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Sistemas de Gestión</h3>
+                    <p>ERP, CRM y sistemas personalizados para automatizar y optimizar procesos empresariales.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte Técnico</h3>
+                    <p>Soporte continuo 24/7, mantenimiento preventivo y correctivo de todas nuestras soluciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">¿Por qué elegir Gecko Solutions?</h2>
+                    <p>
+                        Somos una startup tecnológica boliviana especializada en crear soluciones digitales 
+                        que transforman la manera en que las empresas gestionan sus operaciones.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Innovación Constante</h3>
+                                <p>Utilizamos las últimas tecnologías para crear soluciones eficientes y escalables.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Equipo Especializado</h3>
+                                <p>Desarrolladores expertos con años de experiencia en cada tecnología.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Compromiso Total</h3>
+                                <p>Nos comprometemos con el éxito de tu proyecto desde el inicio hasta el soporte continuo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-element"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hablemos de tu proyecto</h2>
+                <p class="section-description">
+                    ¿Listo para transformar tu negocio? Contáctanos y descubre cómo podemos ayudarte
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de contacto</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>+591 64222142</p>
+                            <a href="https://wa.me/59164222142" class="contact-link">Enviar mensaje</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@geckosolutions.bo</p>
+                            <a href="mailto:info@geckosolutions.bo" class="contact-link">Escribir email</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Ubicación</h4>
+                            <p>La Paz, Bolivia</p>
+                            <span class="contact-link">Servicio a nivel nacional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Tu teléfono">
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="geckotaller">GeckoTaller - Sistema para talleres</option>
+                            <option value="geckorestaurant">GeckoRestaurant - Sistema para restaurantes</option>
+                            <option value="geckofarma">GeckoFarma - Sistema para farmacias</option>
+                            <option value="app-development">Desarrollo de app móvil</option>
+                            <option value="app-migration">Migración de aplicación</option>
+                            <option value="app-update">Actualización de app</option>
+                            <option value="other">Otro servicio</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="https://raw.githubusercontent.com/gecko-site/gecko-site.github.io/refs/heads/main/gecko.png" alt="Gecko Solutions" class="logo">
+                        <span class="logo-text">Gecko Solutions</span>
+                    </div>
+                    <p>Transformando negocios con tecnología innovadora desde La Paz, Bolivia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="#productos">GeckoTaller</a></li>
+                        <li><a href="#productos">GeckoRestaurant</a></li>
+                        <li><a href="#productos">GeckoFarma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Desarrollo de Apps</a></li>
+                        <li><a href="#servicios">Migración</a></li>
+                        <li><a href="#servicios">Actualizaciones</a></li>
+                        <li><a href="#servicios">Soporte Técnico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="https://wa.me/59164222142">WhatsApp: +591 64222142</a></li>
+                        <li><a href="mailto:info@geckosolutions.bo">info@geckosolutions.bo</a></li>
+                        <li>La Paz, Bolivia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gecko Solutions. Todos los derechos reservados.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
