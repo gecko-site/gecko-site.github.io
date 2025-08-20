@@ -1,14 +1,58 @@
-// ===== INICIALIZACIÓN ===== 
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar EmailJS
-    emailjs.init({publicKey: "L-BAzfch2akrFYIrM"});
+// ===== WHATSAPP INTEGRATION =====
+function initWhatsAppIntegration() {
+    // Preparar mensajes predefinidos para diferentes servicios
+    const whatsappMessages = {
+        geckotaller: "Hola, me interesa conocer más sobre GeckoTaller para mi taller mecánico.",
+        geckorestaurant: "Hola, necesito información sobre GeckoRestaurant para mi restaurante.",
+        geckofarma: "Hola, quiero saber más sobre GeckoFarma para mi farmacia.",
+        'app-development': "Hola, necesito desarrollar una aplicación móvil.",
+        'app-migration': "Hola, quiero migrar mi aplicación existente.",
+        'app-update': "Hola, necesito actualizar mi aplicación móvil.",
+        general: "Hola, me interesa conocer más sobre las soluciones de Gecko Solutions."
+    };
+
+    // Agregar listeners a los botones de productos
+    const productButtons = document.querySelectorAll('.product-btn');
+    productButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productCard = this.closest('.product-card');
+            const productTitle = productCard.querySelector('h3').textContent;
+            let service = 'general';
+            
+            if (productTitle.includes('GeckoTaller')) service = 'geckotaller';
+            else if (productTitle.includes('GeckoRestaurant')) service = 'geckorestaurant';
+            else if (productTitle.includes('GeckoFarma')) service = 'geckofarma';
+            
+            openWhatsApp(service);
+        });
+    });
+}
+
+function openWhatsApp(serviceType = 'general') {
+    const messages = {
+        geckotaller: "Hola, me interesa conocer más sobre GeckoTaller para mi taller mecánico.",
+        geckorestaurant: "Hola, necesito información sobre GeckoRestaurant para mi restaurante.",
+        geckofarma: "Hola, quiero saber más sobre GeckoFarma para mi farmacia.",
+        'app-development': "Hola, necesito desarrollar una aplicación móvil.",
+        'app-migration': "Hola, quiero migrar mi aplicación existente.",
+        'app-update': "Hola, necesito actualizar mi aplicación móvil.",
+        general: "Hola, me interesa conocer más sobre las soluciones de Gecko Solutions."
+    };
     
+    const message = encodeURIComponent(messages[serviceType] || messages.general);
+    const whatsappUrl = `https://wa.me/59164222142?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+}// ===== INICIALIZACIÓN ===== 
+document.addEventListener('DOMContentLoaded', function() {
     // Inicializar componentes
     initNavigation();
     initScrollAnimations();
-    initContactForm();
     initSmoothScrolling();
     initScrollToTop();
+    initCounters();
+    initParallax();
+    initWhatsAppIntegration();
 });
 
 // ===== NAVEGACIÓN MÓVIL =====
@@ -317,6 +361,22 @@ function initCounters() {
         counterObserver.observe(counter);
     });
 }
+    
+
+    // Observar contadores y animar cuando sean visibles
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+
 
 // Efecto parallax sutil en el hero
 function initParallax() {
